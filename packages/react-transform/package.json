@@ -72,8 +72,5 @@
     "react": "19.0.0-rc-3563387fe3-20240621",
     "react-dom": "19.0.0-rc-3563387fe3-20240621",
     "react-router-dom": "^6.9.0"
-  },
-  "publishConfig": {
-    "provenance": true
   }
 }

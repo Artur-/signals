@@ -42,8 +42,5 @@
     "CHANGELOG.md",
     "LICENSE",
     "README.md"
-  ],
-  "publishConfig": {
-    "provenance": true
-  }
+  ]
 }
