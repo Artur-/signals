@@ -1,6 +1,6 @@
 {
   "name": "@preact/signals-react",
-  "version": "2.0.2-r19",
+  "version": "2.0.3-r19",
   "license": "MIT",
   "description": "Manage state with style in React",
   "keywords": [],
