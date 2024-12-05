@@ -5,14 +5,24 @@ import {
 	Signal,
 	ReadonlySignal,
 } from "@preact/signals-core";
-import { useRef, useMemo, useEffect, useLayoutEffect } from "react";
+import {
+	useRef,
+	useMemo,
+	useEffect,
+	useLayoutEffect,
+	isValidElement,
+} from "react";
 import { useSyncExternalStore } from "use-sync-external-store/shim/index.js";
 import { isAutoSignalTrackingInstalled } from "./auto";
 
 export { installAutoSignalTracking } from "./auto";
 
 const Empty = [] as const;
-const ReactElemType = Symbol.for("react.element"); // https://github.com/facebook/react/blob/346c7d4c43a0717302d446da9e7423a8e28d8996/packages/shared/ReactSymbols.js#L15
+const ReactElemType = isValidElement({
+	$$typeof: Symbol.for("react.transitional.element"),
+})
+	? Symbol.for("react.transitional.element")
+	: Symbol.for("react.element");
 const noop = () => {};
 
 export function wrapJsx<T>(jsx: T): T {
